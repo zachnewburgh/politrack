@@ -2,6 +2,9 @@
   "lib": {
     "name": "bower-rails generated lib assets",
     "dependencies": {
+      "angular": "v1.5.3",
+      "angular-ui-router": "latest",
+      "angular-resource": "v1.5.3"
       // "threex"      : "git@github.com:rharriso/threex.git",
       // "gsvpano.js"  : "https://github.com/rharriso/GSVPano.js/blob/master/src/GSVPano.js"
     }
