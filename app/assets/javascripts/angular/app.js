@@ -12,7 +12,7 @@ angular
         url: 'new',
         templateUrl: 'home/new.html',
         controller: 'PoliticiansController as ctrl'
-      });
+      })
       .state('home.politicians', {
         url: 'politicians',
         templateUrl: 'home/politicians.html',
