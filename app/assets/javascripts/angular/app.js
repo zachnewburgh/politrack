@@ -6,6 +6,11 @@ angular
         url: '/',
         templateUrl: 'home.html',
         controller: 'HomeController as ctrl'
+      })
+      .state('home.new', {
+        url: 'new',
+        templateUrl: 'home/new.html',
+        controller: 'PoliticiansController as ctrl'
       });
       $urlRouterProvider.otherwise('/');
   });
