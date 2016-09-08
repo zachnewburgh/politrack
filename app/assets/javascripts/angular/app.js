@@ -22,6 +22,11 @@ angular
         url: 'politician/:id',
         templateUrl: 'home/show.html',
         controller: 'ViewPoliticianController as ctrl'
+      })
+      .state('home.edit', {
+        url: 'edit/:id',
+        templateUrl: 'home/edit.html',
+        controller: 'EditPoliticianController as ctrl'
       });
 
       $urlRouterProvider.otherwise('/');
