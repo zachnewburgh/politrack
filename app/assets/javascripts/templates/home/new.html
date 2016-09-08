@@ -1,11 +1,11 @@
 <h1>Add a politician</h1>
 
-<form>
+<form validate ng-submit="ctrl.addPolitician()">
   <label for="name">Name</label>
-  <input name="title">
+  <input type="text" ng-model="ctrl.politician.name">
 
   <label for="bio">Bio</label>
-  <input name="bio">
+  <input type="text" ng-model="ctrl.politician.bio">
 
   <input type="submit" value="Add Politician">
 </form>
