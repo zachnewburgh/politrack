@@ -1,0 +1,11 @@
+<h1>Edit politician</h1>
+
+<form validate ng-submit="ctrl.editpolitician()">
+  <label for="name">Name</label>
+  <input type="text" ng-model="ctrl.politician.name">
+
+  <label for="bio">Bio</label>
+  <input type="text" ng-model="ctrl.politician.bio">
+
+  <input type="submit" value="Update Politician">
+</form>
