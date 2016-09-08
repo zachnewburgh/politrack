@@ -22,7 +22,7 @@ module Api
       end
 
       def update
-        @politican = Politician.find(params[:id])
+        @politician = Politician.find(params[:id])
         if @politician.update(politician_params)
           respond_to do |format|
             format.json {render json: @politician}
