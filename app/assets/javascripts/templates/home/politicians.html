@@ -4,5 +4,6 @@
   <li ng-repeat="politician in ctrl.politicians">
     <h3>{{politician.name}}</h3>
     <p>{{politician.bio}}</p>
+    <a href="#" ui-sref="home.politician({id: politician.id})">View Politician</a>
   </li>
 </ul>
