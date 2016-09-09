@@ -1,4 +1,4 @@
-function PoliticiansController(Politician) {
+function PoliticiansController(Politician, $location, $state) {
   var ctrl = this;
   ctrl.politicians = Politician.query();
 
