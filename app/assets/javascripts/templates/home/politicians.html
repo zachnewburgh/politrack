@@ -1,7 +1,11 @@
 <h1>Politicians</h1>
 
   Search by name: <input type="text" ng-model="politicianName"/>
-  Search by bio: <select ng-model="politicianBio" ng-options="politician.bio for politician in ctrl.politicians"></select>
+  Search by bio: <select ng-model="politicianBio">
+                   <option value=""></option>
+                   <option ng-repeat="politician in ctrl.politicians">{{politician.bio}}</option>
+                 </select>
+  
 
 <div ng-repeat="politician in ctrl.politicians">
   <div ng-if="(politicianName === undefined && politicianBio == undefined) ||
