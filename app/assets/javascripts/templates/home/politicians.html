@@ -2,8 +2,8 @@
 
 Search by name: <input type="text" ng-model="politicianName"/>
 
-<ul>
-  <li ng-repeat="politician in ctrl.politicians">
+<!-- <ul> -->
+  <div ng-repeat="politician in ctrl.politicians">
   <div ng-if="politicianName === undefined || politician.name.toLowerCase().includes(politicianName.toLowerCase())">
     <h3>{{politician.name}}</h3>
     <p>{{politician.bio}}</p>
@@ -11,5 +11,5 @@ Search by name: <input type="text" ng-model="politicianName"/>
     <a href="#" ui-sref="home.edit({id: politician.id})">Edit Politician</a>
     <a href ng-click="ctrl.deletePolitician(politician)">Delete Politician</a>
     <div>
-  </li>
-</ul>
+  </div>
+<!-- </ul> -->
