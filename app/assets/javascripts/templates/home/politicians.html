@@ -1,11 +1,15 @@
 <h1>Politicians</h1>
 
+Search by name: <input type="text" ng-model="politicianName"/>
+
 <ul>
   <li ng-repeat="politician in ctrl.politicians">
+  <div ng-if="politicianName === undefined || politician.name.toLowerCase().includes(politicianName.toLowerCase())">
     <h3>{{politician.name}}</h3>
     <p>{{politician.bio}}</p>
     <a href="#" ui-sref="home.politician({id: politician.id})">View Politician</a>
     <a href="#" ui-sref="home.edit({id: politician.id})">Edit Politician</a>
     <a href ng-click="ctrl.deletePolitician(politician)">Delete Politician</a>
+    <div>
   </li>
 </ul>
