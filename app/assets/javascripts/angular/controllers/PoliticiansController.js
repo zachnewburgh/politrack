@@ -4,7 +4,7 @@ function PoliticiansController(Politician, $location, $state) {
 
   ctrl.deletePolitician = function(politician) {
     politician.$delete(function() {
-      $state.go($state.current, {}, {reload: true});
+      $state.reload();
     });
   };
 };
