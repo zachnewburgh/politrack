@@ -29,3 +29,12 @@ a {
 input.ng-invalid.ng-touched {
   background-color: #FA787E;
 }
+
+header > h3 {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+header span {
+  margin-left: 12.5px;
+}
