@@ -3,8 +3,10 @@ function PoliticiansController(Politician, $location, $state) {
   ctrl.politicians = Politician.query();
 
   ctrl.upvotePolitician = function(politician) {
-    ctrl.politician.popularity = ctrl.politician.popularity + 1;
-  }
+    politician.$update(function() {
+      politician.popularity = politician.popularity + 1;
+    });
+  };
 
   ctrl.deletePolitician = function(politician) {
     politician.$delete(function() {
