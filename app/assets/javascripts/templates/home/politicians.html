@@ -10,7 +10,7 @@
 <div ng-repeat="politician in ctrl.politicians | filter: searchText">
   <header>
     <h3>{{politician.name}}</h3>
-    <span>{{politician.popularity}}</span>
+    <span><u>Popularity: {{politician.popularity}}</u></span>
   </header>
   <p>{{politician.bio}}</p>
   <a href ng-click="ctrl.upvotePolitician(politician)">Upvote Politician</a>
