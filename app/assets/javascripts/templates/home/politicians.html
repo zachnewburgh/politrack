@@ -1,13 +1,13 @@
 <h1>Politicians</h1>
 
-  Search: <input type="text" placeholder="enter name here" ng-model="politicianName"/>
-  Search by bio: <select ng-model="politicianBio">
+  Search: <input type="text" placeholder="enter name here" ng-model="searchText"/>
+  Search by bio: <select ng-model="searchText">
                    <option value=""></option>
                    <option ng-repeat="politician in ctrl.politicians">{{politician.bio}}</option>
                  </select>
   
 
-<div ng-repeat="politician in ctrl.politicians | filter: politicianName">
+<div ng-repeat="politician in ctrl.politicians | filter: searchText">
   <h3>{{politician.name}}</h3>
   <p>{{politician.bio}}</p>
   <a href="#" ui-sref="home.politician({id: politician.id})">View Politician</a>
