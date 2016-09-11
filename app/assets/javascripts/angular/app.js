@@ -10,7 +10,7 @@ angular
       })
       .state('home.main', {
         url: 'main',
-        templateUrl: 'main.html',
+        templateUrl: 'home/main.html',
         controller: 'MainController as ctrl'
       })
       .state('home.new', {
