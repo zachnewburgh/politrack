@@ -8,13 +8,9 @@
   
 
 <div ng-repeat="politician in ctrl.politicians">
-  <div ng-if="(politicianName === undefined && politicianBio == undefined) ||
-              politician.name.toLowerCase().includes(politicianName.toLowerCase()) ||
-              politician.bio === politicianBio.bio">
-    <h3>{{politician.name}}</h3>
-    <p>{{politician.bio}}</p>
-    <a href="#" ui-sref="home.politician({id: politician.id})">View Politician</a>
-    <a href="#" ui-sref="home.edit({id: politician.id})">Edit Politician</a>
-    <a href ng-click="ctrl.deletePolitician(politician)">Delete Politician</a>
-  <div>
+  <h3>{{politician.name}}</h3>
+  <p>{{politician.bio}}</p>
+  <a href="#" ui-sref="home.politician({id: politician.id})">View Politician</a>
+  <a href="#" ui-sref="home.edit({id: politician.id})">Edit Politician</a>
+  <a href ng-click="ctrl.deletePolitician(politician)">Delete Politician</a>
 </div>
