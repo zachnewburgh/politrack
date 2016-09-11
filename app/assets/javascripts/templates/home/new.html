@@ -2,10 +2,10 @@
 
 <form validate ng-submit="ctrl.addPolitician()">
   <label for="name">Name</label>
-  <input type="text" ng-model="ctrl.politician.name">
+  <input type="text" ng-model="ctrl.politician.name" required>
 
   <label for="bio">Bio</label>
-  <input type="text" ng-model="ctrl.politician.bio">
+  <input type="text" ng-model="ctrl.politician.bio" required>
 
   <input type="submit" value="Add Politician">
 </form>
