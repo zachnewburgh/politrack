@@ -4,6 +4,8 @@ module Api
       skip_before_filter :verify_authenticity_token 
       respond_to :json 
 
+      require 'pry'
+
       def index
         respond_with(Politician.all.order("id DESC"))
       end
