@@ -5,7 +5,7 @@ function PoliticiansController(Politician, $location, $state) {
   ctrl.upvotePolitician = function(politician) {
     politician.popularity = politician.popularity + 1;
     politician.$update(function() {
-    
+      
     });
   };
 
