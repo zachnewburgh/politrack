@@ -9,9 +9,10 @@
 
 <div ng-repeat="politician in ctrl.politicians | filter: searchText | orderBy: ['-popularity', 'name']">
   <header>
-    <h3>{{politician.name}}</h3>
+    <h3>{{politician.name}},</h3>
     <span><u>Popularity: {{politician.popularity}}</u></span>
   </header>
+  <p>{{politician.position}}</p>
   <p>{{politician.bio}}</p>
   <a href ng-click="ctrl.upvotePolitician(politician)">Upvote Politician</a>
   <a href="#" ui-sref="home.politician({id: politician.id})">View Politician</a>
