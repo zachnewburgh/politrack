@@ -7,7 +7,7 @@
                  </select>
   
 
-<div ng-repeat="politician in ctrl.politicians | filter: searchText | orderBy: ['-popularity', 'name']">
+<div ng-repeat="politician in ctrl.politicians | filter: searchText | orderBy: ['-popularity', 'position','name']">
   <header>
     <h3>{{politician.name}},</h3>
     <span><u>Popularity: {{politician.popularity}}</u></span>
