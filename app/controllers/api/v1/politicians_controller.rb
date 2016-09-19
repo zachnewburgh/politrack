@@ -38,7 +38,7 @@ module Api
 
       private
       def politician_params
-        params.require(:politician).permit(:name, :bio, :government_level, :popularity, :position)
+        params.require(:politician).permit(:name, :bio, :government_level, :homestate, :popularity, :position)
       end
       
     end
