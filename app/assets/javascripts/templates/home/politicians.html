@@ -12,7 +12,7 @@
     <h3>{{politician.name}}, {{politician.position}}</h3>
     <span><u>Popularity: {{politician.popularity}}</u></span>
   </header>
-  <p>{{politician.bio}}</p>
+  <p>{{politician.homestate}}</p>
   <a href ng-click="ctrl.upvotePolitician(politician)">Upvote Politician</a>
   <a href="#" ui-sref="home.politician({id: politician.id})">View Politician</a>
   <a href="#" ui-sref="home.edit({id: politician.id})">Edit Politician</a>
