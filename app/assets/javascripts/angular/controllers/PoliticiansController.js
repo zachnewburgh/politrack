@@ -1,6 +1,10 @@
-function PoliticiansController(Politician, $location, $state) {
+function PoliticiansController(PoliticianService, $location, $state) {
   var ctrl = this;
-  ctrl.politicians = Politician.query();
+
+  PoliticianService.getPoliticians()
+    .then(function(response) {
+      ctrl.politicians = response.data;
+    });
 
   ctrl.upvotePolitician = function(politician) {
     politician.popularity = politician.popularity + 1;
