@@ -1,6 +1,10 @@
-function ViewPoliticianController(Politician, $stateParams) {
+function ViewPoliticianController(PoliticianService, $stateParams) {
   var ctrl = this;
-  ctrl.politician = Politician.get({id: $stateParams.id});
+
+  PoliticianService.getPolitician($stateParams.id)
+    .then(function(response) {
+      ctrl.politician = response.data
+    })
 }
 
 angular
