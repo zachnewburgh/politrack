@@ -33,6 +33,11 @@ angular
         templateUrl: 'home/edit.html',
         controller: 'EditPoliticianController as ctrl'
       });
+      .state('home.politicians.homestate', {
+        url: 'politicians/:homestate',
+        templateUrl: 'home/homestate.html',
+        controller: 'PoliticiansController as ctrl'
+      });
 
       $urlRouterProvider.otherwise('/');
   });
