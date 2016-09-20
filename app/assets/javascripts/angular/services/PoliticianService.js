@@ -8,15 +8,15 @@ function PoliticianService($http) {
     return $http.get('http://localhost:3000/api/v1/politicians/' + id);
   };
 
-  this.createPolitician= function(id) {
+  this.createPolitician = function() {
+    return $http.post('http://localhost:3000/api/v1/politicians' );
+  };
+
+  this.updatePolitician = function(id) {
     return $http.post('http://localhost:3000/api/v1/politicians/' + id);
   };
 
-  this.updatePolitician= function(id) {
-    return $http.post('http://localhost:3000/api/v1/politicians/' + id);
-  };
-
-  this.deletePolitician= function(id) {
+  this.deletePolitician = function(id) {
     return $http.delete('http://localhost:3000/api/v1/politicians/' + id);
   };
 }
