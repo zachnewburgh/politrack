@@ -1,5 +1,5 @@
 function PoliticianService($http) {
-  
+
   this.getPoliticians = function() {
     return $http.get('http://localhost:3000/api/v1/politicians');
   };
@@ -23,4 +23,4 @@ function PoliticianService($http) {
 
 angular
   .module('app')
-  .service('UserService', UserService);
+  .service('PoliticianService', PoliticianService);
