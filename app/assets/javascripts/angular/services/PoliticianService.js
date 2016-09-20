@@ -9,7 +9,7 @@ function PoliticianService($http) {
   };
 
   this.createPolitician = function() {
-    return $http.post('http://localhost:3000/api/v1/politicians' );
+    return $http.post('http://localhost:3000/api/v1/politicians');
   };
 
   this.updatePolitician = function(id) {
