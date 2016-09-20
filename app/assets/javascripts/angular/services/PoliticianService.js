@@ -4,20 +4,20 @@ function PoliticianService($http) {
     return $http.get('http://localhost:3000/api/v1/politicians');
   };
 
-  this.getPolitician = function(politician) {
-    return $http.get('http://localhost:3000/api/v1/politicians/' + politician.id);
+  this.getPolitician = function(id) {
+    return $http.get('http://localhost:3000/api/v1/politicians/' + id);
   };
 
-  this.createPolitician= function(politician) {
-    return $http.post('http://localhost:3000/api/v1/politicians/' + politician.id);
+  this.createPolitician= function(id) {
+    return $http.post('http://localhost:3000/api/v1/politicians/' + id);
   };
 
-  this.updatePolitician= function(politician) {
-    return $http.post('http://localhost:3000/api/v1/politicians/' + politician.id);
+  this.updatePolitician= function(id) {
+    return $http.post('http://localhost:3000/api/v1/politicians/' + id);
   };
 
-  this.deletePolitician= function(politician) {
-    return $http.delete('http://localhost:3000/api/v1/politicians/' + politician.id);
+  this.deletePolitician= function(id) {
+    return $http.delete('http://localhost:3000/api/v1/politicians/' + id);
   };
 }
 
