@@ -1,4 +1,4 @@
-function NewPoliticianController($location, PoliticianService) {
+function NewPoliticianController($location, PoliticianService, StateService) {
   var ctrl = this;
 
   StateService.getStates()
