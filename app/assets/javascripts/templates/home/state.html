@@ -1,1 +1,7 @@
-{{ctrl.state.name}}
+<h2>{{ctrl.state.name}}</h2>
+
+<div ng-repeat="politician in ctrl.politicians">
+  <div ng-if="politician.homestate == ctrl.state.name">
+    {{politician.name}}
+  </div>
+</div>
