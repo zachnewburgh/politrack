@@ -1,12 +1,12 @@
-function NewPoliticianController(Politician, $location) {
+function NewPoliticianController($location, $http, PoliticianService) {
   var ctrl = this;
-  ctrl.politician = new Politician();
 
   ctrl.addPolitician = function() {
-    ctrl.politician.$save(function() {
-      $location.path('politicians');
-    });
+    var data = {name: this.politician.name, position: this.politician.position, homestate: this.politician.homestate};
+    PoliticianService.createPolitician(data);
+    $location.path('politicians');
   };
+  
 };
 
 angular
