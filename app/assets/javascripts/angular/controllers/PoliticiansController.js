@@ -8,16 +8,16 @@ function PoliticiansController(PoliticianService, $location, $state) {
 
   ctrl.upvotePolitician = function(politician) {
     politician.popularity = politician.popularity + 1;
-    politician.$update(function() {
-      
-    });
+  
+    var data = {popularity: politician.popularity};
+    PoliticianService.updatePolitician(politician.id, data);
   };
 
   ctrl.deletePolitician = function(politician) {
-    politician.$delete(function() {
-      $state.reload();
-    });
+    PoliticianService.deletePolitician(politician.id);
+    $state.reload();
   };
+
 };
 
 angular
