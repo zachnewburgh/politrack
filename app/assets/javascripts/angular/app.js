@@ -32,7 +32,7 @@ angular
         url: 'edit/:id',
         templateUrl: 'home/edit.html',
         controller: 'EditPoliticianController as ctrl'
-      });
+      })
       .state('home.politicians.homestate', {
         url: 'politicians/:homestate',
         templateUrl: 'home/homestate.html',
