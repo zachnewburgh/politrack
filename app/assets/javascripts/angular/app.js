@@ -33,10 +33,10 @@ angular
         templateUrl: 'home/edit.html',
         controller: 'EditPoliticianController as ctrl'
       })
-      .state('home.politicians.homestate', {
-        url: 'politicians/:homestate',
-        templateUrl: 'home/homestate.html',
-        controller: 'PoliticiansController as ctrl'
+      .state('home.state', {
+        url: 'state/:id',
+        templateUrl: 'home/state.html',
+        controller: 'StatesController as ctrl'
       });
 
       $urlRouterProvider.otherwise('/');
