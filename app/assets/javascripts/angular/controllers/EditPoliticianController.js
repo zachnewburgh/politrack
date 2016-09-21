@@ -1,12 +1,16 @@
-function EditPoliticianController(Politician, $location, $stateParams) {
+function EditPoliticianController($location, $stateParams, PoliticianService) {
   var ctrl = this;
-  ctrl.politician = Politician.get({id: $stateParams.id});
+  ctrl.politician = PoliticianService.getPolitician($stateParams.id)
+    .then(function(response) {
+      ctrl.politician = response.data
+    });
 
   ctrl.editPolitician = function() {
-    ctrl.politician.$update(function() {
-      $location.path('politicians');
-    });
+    var data = {name: this.politician.name, position: this.politician.position, homestate: this.politician.homestate}
+    PoliticianService.updatePolitician(ctrl.politician.id, data);
+    $location.path('politicians')
   };
+
 };
 
 angular
