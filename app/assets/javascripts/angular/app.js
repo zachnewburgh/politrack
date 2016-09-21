@@ -36,7 +36,7 @@ angular
       .state('home.state', {
         url: 'state/:id',
         templateUrl: 'home/state.html',
-        controller: 'StatesController as ctrl'
+        controller: 'ViewStateController as ctrl'
       });
 
       $urlRouterProvider.otherwise('/');
