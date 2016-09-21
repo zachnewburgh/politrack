@@ -4,7 +4,7 @@ function StateService($http) {
     return $http.get('http://localhost:3000/api/v1/states');
   };
 
-  this.getState= function(id) {
+  this.getState = function(id) {
     return $http.get('http://localhost:3000/api/v1/states/' + id);
   };
 
