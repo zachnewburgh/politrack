@@ -1,4 +1,4 @@
-function NewPoliticianController($location, $http, PoliticianService) {
+function NewPoliticianController($location, PoliticianService) {
   var ctrl = this;
 
   ctrl.addPolitician = function() {
