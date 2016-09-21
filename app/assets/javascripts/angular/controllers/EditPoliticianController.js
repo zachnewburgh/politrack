@@ -1,5 +1,7 @@
 function EditPoliticianController($location, $stateParams, PoliticianService) {
+
   var ctrl = this;
+  
   ctrl.politician = PoliticianService.getPolitician($stateParams.id)
     .then(function(response) {
       ctrl.politician = response.data
