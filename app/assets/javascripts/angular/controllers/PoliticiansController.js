@@ -1,4 +1,4 @@
-function PoliticiansController(PoliticianService, $location, $state) {
+function PoliticiansController(PoliticianService, $location, $state, StateService) {
   var ctrl = this;
 
   PoliticianService.getPoliticians()
@@ -17,6 +17,23 @@ function PoliticiansController(PoliticianService, $location, $state) {
     PoliticianService.deletePolitician(politician.id);
     $state.reload();
   };
+
+  ctrl.visitState = function(politician) {
+    var state = politician.homestate;
+    ctrl.stateId = ''
+
+    StateService.getStates()
+      .then(function(response) {
+        var statesArray = response.data;
+        statesArray.forEach(function(object) {
+          if (object.name === state) {
+            ctrl.stateId = object.id;
+          }
+        });
+        $location.path('state/' + ctrl.stateId)
+      });
+
+  }
 
 };
 
