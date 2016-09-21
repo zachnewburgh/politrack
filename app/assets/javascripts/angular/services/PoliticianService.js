@@ -8,12 +8,12 @@ function PoliticianService($http) {
     return $http.get('http://localhost:3000/api/v1/politicians/' + id);
   };
 
-  this.createPolitician = function() {
-    return $http.post('http://localhost:3000/api/v1/politicians');
+  this.createPolitician = function(data) {
+    $http.post('http://localhost:3000/api/v1/politicians', data);
   };
 
-  this.updatePolitician = function(id) {
-    return $http.post('http://localhost:3000/api/v1/politicians/' + id);
+  this.updatePolitician = function(id, data) {
+    $http.put('http://localhost:3000/api/v1/politicians/' + id, data);
   };
 
   this.deletePolitician = function(id) {
