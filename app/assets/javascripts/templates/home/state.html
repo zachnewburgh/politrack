@@ -3,14 +3,5 @@
 <div ng-repeat="politician in ctrl.politicians">
   <div ng-if="politician.homestate == ctrl.state.name">
     {{politician.name}}
-    <button ng-click="ctrl.toggleEditForm()">Edit State</button>
-    <div ng-hide="ctrl.editForm">
-      <form validate ng-submit="ctrl.editPolitician()">
-        <label for="homestate">Home State</label>
-        <input type="text" ng-model="politician.homestate" required>
-        <input type="submit" value="Update Politician">
-      </form>
-    </div>
-
   </div>
 </div>

@@ -11,11 +11,6 @@ function ViewStateController(StateService, $stateParams, PoliticianService) {
       ctrl.politicians = response.data
     });
 
-  ctrl.editForm = true;
-
-  ctrl.toggleEditForm = function() {
-    ctrl.editForm = !ctrl.editForm;
-  }
 }
 
 angular
