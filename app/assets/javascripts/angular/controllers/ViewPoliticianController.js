@@ -3,8 +3,8 @@ function ViewPoliticianController(PoliticianService, $stateParams, $state) {
 
   PoliticianService.getPolitician($stateParams.id)
     .then(function(response) {
-      ctrl.politician = response.data
-    })
+      ctrl.politician = response.data;
+    });
 
   ctrl.editPolitician = function() {
     var data = {homestate: this.politician.homestate};
