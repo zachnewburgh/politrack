@@ -21,6 +21,7 @@ states = State.create([
   {name: 'Guam'},
   {name: 'Hawaii'},
   {name: 'Idaho'},
+  {name: 'Illinois'},
   {name: 'Indiana'},
   {name: 'Iowa'},
   {name: 'Kansas'},
