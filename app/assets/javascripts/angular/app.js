@@ -35,7 +35,7 @@ angular
       })
       .state('home.state', {
         url: 'state/:id',
-        templateUrl: 'home/state/state.html',
+        templateUrl: 'home/state/show.html',
         controller: 'ViewStateController as ctrl'
       });
 
