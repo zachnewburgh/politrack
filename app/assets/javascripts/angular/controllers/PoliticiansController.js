@@ -20,7 +20,7 @@ function PoliticiansController(PoliticianService, $location, $state, StateServic
 
   ctrl.visitState = function(politician) {
     var state = politician.homestate;
-    ctrl.stateId = ''
+    ctrl.stateId = '';
 
     StateService.getStates()
       .then(function(response) {
