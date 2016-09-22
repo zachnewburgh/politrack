@@ -2,6 +2,9 @@
 
 <div ng-repeat="politician in ctrl.politicians">
   <div ng-if="politician.homestate == ctrl.state.name">
-    {{politician.name}}
+    <h3>{{politician.name}}, {{politician.position}}</h3>
+
+    <a href="#" ui-sref="home.politician({id: politician.id})">View Politician</a>
+    <a href="#" ui-sref="home.edit({id: politician.id})">Edit Politician</a>
   </div>
 </div>
