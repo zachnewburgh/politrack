@@ -28,9 +28,12 @@ function PoliticiansController(PoliticianService, $location, $state, StateServic
         statesArray.forEach(function(object) {
           if (object.name === state) {
             ctrl.stateId = object.id;
+            $location.path('state/' + ctrl.stateId);
           }
         });
-        $location.path('state/' + ctrl.stateId)
+        alert("Not a state!");
+        $location.path('politicians');
+        
       });
 
   }
