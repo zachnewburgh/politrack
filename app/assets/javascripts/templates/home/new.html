@@ -12,11 +12,3 @@
 
   <input type="submit" value="Add Politician">
 </form>
-
-
-<form>
-  <select>
-    <option value="">-- select state --</option>
-    <option ng-repeat="state in ctrl.states | orderBy: 'name'">{{state.name}}</option>
-  </select>
-</form>
