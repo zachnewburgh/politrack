@@ -25,14 +25,19 @@ function PoliticiansController(PoliticianService, $location, $state, StateServic
     StateService.getStates()
       .then(function(response) {
         var statesArray = response.data;
+        
         statesArray.forEach(function(object) {
           if (object.name === state) {
             ctrl.stateId = object.id;
-            $location.path('state/' + ctrl.stateId);
           }
         });
-        alert("Not a state!");
-        $location.path('politicians');
+        
+        if (ctrl.stateId === parseInt(ctrl.stateId, 10)) {
+          $location.path('state/' + ctrl.stateId);
+        } else {
+          alert("Not a state!");
+          $location.path('politicians');
+        };
         
       });
 
