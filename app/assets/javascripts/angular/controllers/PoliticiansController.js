@@ -38,10 +38,8 @@ function PoliticiansController(PoliticianService, $location, $state, StateServic
           alert("Not a state!");
           $location.path('politicians');
         };
-        
       });
-
-  }
+  };
 
 };
 
