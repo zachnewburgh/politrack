@@ -1,10 +1,12 @@
 <h3>{{ctrl.politician.name}}</h3>
-<p>{{ctrl.politician.homestate}}</p>
 
-<form validate ng-submit="ctrl.editPolitician()" ng-hide="editState">
+<p ng-hide="editState">{{ctrl.politician.homestate}}</p>
+<form validate ng-submit="ctrl.editPolitician()" ng-hide="!editState">
   <input type="text" ng-model="ctrl.politician.homestate" required>
-  <input type="submit" value="Edit State">
+  <input type="submit" value="Submit"><br>
 </form>
+
+<button ng-click="editState = !editState" ng-hide="editState">Edit State</button>
 
 <br><br>
 
