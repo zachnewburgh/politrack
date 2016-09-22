@@ -10,6 +10,8 @@ function ViewStateController(StateService, $stateParams, PoliticianService) {
     .then(function(response) {
       ctrl.politicians = response.data
     });
+
+  ctrl.editForm = false;
 }
 
 angular
